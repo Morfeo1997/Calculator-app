@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    
 }
 :root{
     --Very-dark-desaturated-blue-main: hsl(222, 26%, 31%);
@@ -104,18 +105,51 @@ body{
 
 
 .range{
+    -webkit-appearance: none;
     width: 60px;
     border-radius: 25px;
     padding: 1px 2px;
+    border: none;
+    cursor: pointer;
+    
 }
 
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+}
+
+.range::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 60px;
+    border-radius: 25px;
+    padding: 1px 2px;
+    
+}
 
 .range::-moz-range-thumb{
     width: 12px;
     height: 12px;
     border-radius: 50%;
     border: none;
-    background: var(--Red);
+    
+}
+
+.range::-ms-track{
+    width: 60px;
+    border-radius: 25px;
+    padding: 1px 2px;
+}
+
+.range::-ms-thumb{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
 }
 
 .result-container{
@@ -219,7 +253,23 @@ body{
     background-color: var(--Very-dark-desaturated-blue-toggle);
 }
 
+.range-theme-1::-webkit-slider-thumb{
+    background-color: var(--Red);
+}
+
+.range-theme-1::-webkit-slider-runnable-track{
+    background-color: var(--Very-dark-desaturated-blue-toggle);
+}
+
 .range-theme-1::-moz-range-thumb{
+    background-color: var(--Red);
+}
+
+.range-theme-1::-ms-track{
+    background-color: var(--Very-dark-desaturated-blue-toggle);
+}
+
+.range-theme-1::-ms-thumb{
     background-color: var(--Red);
 }
 
@@ -231,11 +281,39 @@ body{
     background-color: var(--Orange);
 }
 
+.range-theme-2::-webkit-slider-thumb{
+    background-color: var(--Orange);
+}
+
+.range-theme-2::-webkit-slider-runnable-track{
+    background-color: var(--Grayish-orange);
+}
+
+.range-theme-2::-ms-track{
+    background-color: var(--Grayish-orange);
+}
+
+.range-theme-2::-ms-thumb{
+    background-color: var(--Orange);
+}
+
 .range-theme-3{
     background-color: var(--Dark-violet);
 }
 
+.range-theme-3::-webkit-slider-thumb{
+    background-color: var(--Pure-cyan);
+}
+
 .range-theme-3::-moz-range-thumb{
+    background-color: var(--Pure-cyan);
+}
+
+.range-theme-3::-ms-track{
+    background-color: var(--Dark-violet);
+}
+
+.range-theme-3::-ms-thumb{
     background-color: var(--Pure-cyan);
 }
 
